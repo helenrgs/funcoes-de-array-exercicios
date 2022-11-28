@@ -10,4 +10,16 @@ const produtos = [
     { nome: "Berinjela kg", categoria: "Hortifruti", preco: 8.99 },
     { nome: "Sabão em Pó", categoria: "Limpeza", preco: 10.80 }
  ]
- 
+
+ //Dado um array de produtos, onde cada produto é um objeto com nome, preço e categoria, 
+ //retorne um novo array com o nome dos produtos da categoria Limpeza.
+
+ const apenasLimpeza = produtos.filter((produto, indice, array) => {
+    return produto.categoria === "Limpeza"
+ });
+
+ function imprimir (funcao) {
+    return console.log(funcao)
+ }
+
+imprimir(apenasLimpeza)
